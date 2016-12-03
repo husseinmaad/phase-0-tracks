@@ -1,16 +1,18 @@
 body 
 {
   max-width: 960px;
+  display: block;
+  margin: auto;
 }
 main 
 {
   width: 70%;
   float: right;
   padding: 20px;
-
 }
+
 #external-links  {
-  width: 20%;
+  min-width: 20%;
   display: inline-block;
   vertical-align: top;
   padding: 20px;
@@ -54,8 +56,27 @@ figcaption {
   text-align: right;
 }
 
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 990px) {
   body {
-    background-color: hotpink;
+    margin: 0 auto;
+  }
+  main {
+    min-width:70%;
+  }
+  #external-links {
+    padding: 10px;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    min-width: 90%;
+    float: left;
+  }
+  #external-links {
+    float: left;
+    padding-top:0px;
   }
 }
