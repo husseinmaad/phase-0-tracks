@@ -1,0 +1,33 @@
+Equip Your New Robot To Use The Elevator Algorithm:
+** I will suggest that the elevator keys panel on the right side and the floor number is 4.
+
+
+- Push the button to open the elevator door
+
+- If the elevator door is open:
+  - Start walk inside the elevator till you reach the elevator wall in front of you
+  - Turn left and walk till you reach the wall then turn left
+  - Walk straight till you reach the key panel 
+  - Check the the current floor 
+    - If the current floor equal G or number less than 4:
+        - Count up from 1 to 4 and press number 4 button
+        - Wait till the door close
+        - Go to the center of the elevator 
+        - Wait till the door open
+        - If the floor number equal 4 then start walk to go out from the elevator
+        - Stop
+        otherwise:
+          - stay inside the elevator 
+    - If the current floor equal number more than 4:
+        - Count down from that number to 4 and press number 4 button.
+        - Wait till the door close.
+        - Go to the center of the elevator. 
+        - Wait till the door open.
+        - If the floor number equal 4 then start walk to go out from the elevator.
+        - Stop.
+        Otherwise:
+          - Stay inside the elevator 
+Otherwise:
+- Wait in front of the door
+
+
