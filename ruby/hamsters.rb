@@ -12,3 +12,6 @@ if age == 0
     age = nil
 end
 
+print "Hi #{h_name}, I see that you selected the volume level #{volume} 
+and your favorite color #{color}, and thank you for your consideration that your #{adoption}.
+And lastly your age is #{age}, thank you for provide us with all these information. "
