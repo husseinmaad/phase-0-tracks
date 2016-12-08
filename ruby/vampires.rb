@@ -24,27 +24,4 @@ health_ins = boolean(gets.chomp)
 
 age_after_verify = age_verify(emp_age, emp_born_year)
 
-if age_after_verify && (eat_garlic||health_ins) ==true
-  check = "Probably not a vampire."
-else
-  check = nil
-end
-if age_after_verify && (eat_garlic||health_ins) == true 
-  check = "Probably a vampire."
-else
-  check = nil
-end
-if age_after_verify && eat_garlic && health_ins == true 
-  check = "Almost certainly a vampire."
-else
-  check = nil
-end
-if emp_name == ("Drake Cula" || "Tu Fang") 
-  check = "Definitely a vampire."
-else
-  check = nil
-end
-if check == nil
-  check = "Results inconclusive"
-end
-print check
+
