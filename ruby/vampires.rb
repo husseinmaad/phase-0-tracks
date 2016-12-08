@@ -24,4 +24,16 @@ health_ins = boolean(gets.chomp)
 
 age_after_verify = age_verify(emp_age, emp_born_year)
 
+check = "Probably not a vampire." if age_after_verify && (eat_garlic||health_ins)
+      
+check = "Probably a vampire." if age_after_verify && (eat_garlic||health_ins) 
+       
+check = "Almost certainly a vampire." if age_after_verify && eat_garlic && health_ins 
+     
+check = "Definitely a vampire." if emp_name == ("Drake Cula" || "Tu Fang")
+ 
+check = "Results inconclusive" if check == nil
+
+print check
+     
 
