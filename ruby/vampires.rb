@@ -23,3 +23,18 @@ puts "Would you like to enroll in the company’s health insurance (y/n)?"
 health_ins = boolean(gets.chomp)
 
 age_after_verify = age_verify(emp_age, emp_born_year)
+check = if age_after_verify && (eat_garlic||health_ins) == true 
+        print "Probably not a vampire."
+      end
+check = if age_after_verify && (eat_garlic||health_ins) == false 
+        print "Probably a vampire."
+      end
+check = if age_after_verify && eat_garlic && health_ins == false 
+        print "Almost certainly a vampire."
+      end
+check = if emp_name == ("Drake Cula" || "Tu Fang")
+      print "Definitely a vampire."
+      end
+check = if check == nil
+  print "Results inconclusive"
+      end
