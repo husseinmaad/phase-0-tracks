@@ -40,4 +40,38 @@ def decrypt(string)
   end
   return string
 end
+# First we call the encrypt methods thats shift all the latter back one spot 
+# and after that we called the decrypt method which return it back to its
+# original position.
 
+=begin
+ - ask the if the want to encrypt or decrypt
+ - if they say encrypt 
+ -  ask them to input the password
+    - call the encrypt method by pass the password
+    -print the result to th screen
+    and exit 
+  - if they say decrypt 
+ -  ask them to input the password
+    - call the encrypt method by pass the password
+    -print the result to th screen
+    and exit 
+  Otherwise 
+  print message you didn't choose any method
+ 
+=end
+
+puts "Do you want to encrypt or decrypt"
+ input = gets.chomp
+  if input == "encrypt"
+    put "Please enter the password"
+    str_password= gets.chomp.downcase
+    result = encrypt(str_password)
+  elsif input == "decrypt"
+    put "Please enter the password"
+    str_password= gets.chomp.downcase
+    result = decrypt(str_password)
+  else 
+    put "You didn't enter any value"
+  end
+  print result
