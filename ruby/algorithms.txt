@@ -31,3 +31,33 @@ Otherwise:
 - Wait in front of the door
 
 
+
+**Diagnose Why the Computer is not Turn On :
+
+- Get the computer that has the problem:
+- Check if its hardware issue of software:
+  - If its hardware problem 
+    - until you checking all the parts
+      - if you find the Motherboard has problem 
+        -print Error message (Motherboard problem)
+      - if you find the screen has problem 
+        -print Error message (Display problem)
+      - if you find the power has problem
+        - print Error message (Power problem)
+  Otherwise: 
+      - Print its not a hardware problem
+  - If its software problem:
+    - Turn on the PC:
+      - If screen start showing pictures 
+        - print the video software is working
+      Otherwise:
+        -print the video card problem
+      if the computer start booting and loading the OS normal:
+        -Print there is no booting error
+      Otherwise:
+        - print this PC need formats.
+
+
+ 
+
+
