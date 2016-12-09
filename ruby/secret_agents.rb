@@ -13,3 +13,31 @@
   - return the latter that is 1 less then the index value
   - store it in our var
 =end
+
+
+def encrypt(string)
+  i =0
+  newStr=""
+  while i <=string.length-1 do
+    
+    if string[i] == "z"
+      newStr[i] = "a"
+    else 
+    newStr += string[i].next
+    end
+    i += 1
+  end
+ return newStr
+end
+
+def decrypt(string)
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  i = 0
+  while i < string.length
+      index = alphabet.index(string[i])
+      string[i] = alphabet[index-1]
+    i += 1
+  end
+  return string
+end
+
