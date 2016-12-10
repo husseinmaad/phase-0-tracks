@@ -43,7 +43,7 @@ while num_emp_process > 0 do
   check = "Results inconclusive" if check == nil
 
   puts "Please list if you have any allergies 
-  ((one at the time)) and type ((done)) when you finish "
+  (one at the time) and type (done) when you finish:"
   
   emp_allergic = ""
   while emp_allergic != "done" do
