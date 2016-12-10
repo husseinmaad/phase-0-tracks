@@ -18,7 +18,7 @@ while num_emp_process > 0 do
   def age_verify(age, year)
     return (Time.new.year - year == age ? true : false)
   end 
-
+# this will ask the user some questions and apply cretin check conditions
   puts "Whats your name?"
   emp_name = gets.chomp.to_s
   puts "How old are you?"
@@ -42,6 +42,7 @@ while num_emp_process > 0 do
    
   check = "Results inconclusive" if check == nil
 
+# this block will process the employee allergies
   puts "Please list if you have any allergies 
   (one at the time) and type (done) when you finish:"
   
