@@ -7,7 +7,7 @@ while num_emp_process > 0 do
   
   # this method to convert the string to boolean
   def boolean(string)
-    return (string.downcse == "y" ? true : false)
+    return (string.downcase == "y" ? true : false)
   end
 
   # verify the age method 
