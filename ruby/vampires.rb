@@ -3,6 +3,7 @@ puts "How many employees you will be process?"
 num_emp_process = gets.chomp.to_i
 
 while num_emp_process > 0 do
+  puts "Please start enter the employee information:"
   
   # this method to convert the string to boolean
   def boolean(string)
@@ -41,9 +42,22 @@ while num_emp_process > 0 do
    
   check = "Results inconclusive" if check == nil
 
-  print check
+  puts "Please list if you have any allergies 
+  ((one at the time)) and type ((done)) when you finish "
   
+  emp_allergic = ""
+  while emp_allergic != "done" do
+    emp_allergic = gets.chomp.to_s
+    if emp_allergic == "sunshine"
+      check = "Probably a vampire."
+      print check
+      break
+    end 
+  end
+  if emp_allergic == "done"
+    print check
+    puts ""
+  end
 
   num_emp_process -= 1
 end   
-
