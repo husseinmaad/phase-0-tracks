@@ -10,16 +10,16 @@
 # "zom".<???>
 # => “zoom”
 
-# "enhance".<???>
+"enhance".center(16)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+"Stop! You’re under arrest!".upcase  
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+"the usual".insert(9,' suspects')
 #=> "the usual suspects"
 
-# " suspects".<???>
+" suspects".insert(0,'the usual')
 # => "the usual suspects"
 
 # "The case of the disappearing last letter".<???>
@@ -35,5 +35,5 @@
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
-# "How many times does the letter 'a' appear in this string?".<???>
+"How many times does the letter 'a' appear in this string?".count "a"
 # => 4
