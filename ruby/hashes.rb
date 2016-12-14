@@ -35,4 +35,8 @@ client_details[:decor_theme] = gets.chomp.to_s
 
 puts "allergist's color"
 client_details[:allergist_color] = gets.chomp.to_s
- 
+ puts "Please review your client's info. " 
+ puts "=================================="
+client_details.each do |key , value|
+ puts "#{key}: #{value} ,"
+end 
