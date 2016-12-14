@@ -52,7 +52,15 @@ if update == 'none'
 end
 update = update.downcase.to_sym
 
+puts "Please enter the new value:"
+new_value = gets.chomp.to_s
+client_details[update]= new_value
 
+puts "Client Details"
+puts "=================================="
+client_details.each do |key , value|
+ puts "#{key}: #{value} ,"
+end
 
 
 
