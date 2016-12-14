@@ -1,10 +1,8 @@
 =begin
-  - create an empty hash with valid keys.
-  thats covers the input values. 
+  - create an empty hash .
   - add user input interface. 
-  - Convert any user input to 
-  the appropriate data type.
-  - assign the input value to the correct key name.
+  - Convert any user input to the appropriate data type
+    and assign the input value to the correct key name.
   - print the user inputs to help the designer review the questions answers.
   - prompt message to ask user if he likes to update some values
   - if the user say "none":
@@ -16,3 +14,4 @@
           - reprint the latest update.
 = end
   
+
