@@ -40,3 +40,20 @@ client_details[:allergist_color] = gets.chomp.to_s
 client_details.each do |key , value|
  puts "#{key}: #{value} ,"
 end 
+
+
+puts "Do you like to update some info?"
+update = gets.chomp.downcase.to_s
+
+if update == 'none'
+  client_details.each do |key , value|
+   puts "#{key}: #{value} ,"
+  end
+end
+update = update.downcase.to_sym
+
+
+
+
+
+
