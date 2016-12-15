@@ -46,7 +46,7 @@ end
 puts "=================================="
 puts "Do you like to update some info?"
 update_index = gets.chomp.downcase.to_s
-client_details.each do |key, value|
+
 if update_index == 'none'
   puts "Client Details"
   puts "=================================="
