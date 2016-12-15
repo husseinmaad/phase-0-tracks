@@ -15,6 +15,7 @@
 =end
   
 client_details = {}
+
 puts "Welcome To The Client Details Form"
 puts "Please answer the fallowing questions"
 
@@ -28,40 +29,39 @@ puts "Sex"
 client_details[:sex] = gets.chomp.to_s
 
 puts "Children number"
-client_details[:children_number] = gets.chomp.to_i 
+client_details[:"children number"] = gets.chomp.to_i 
 
 puts "decor theme"
-client_details[:decor_theme] = gets.chomp.to_s
+client_details[:"decor theme"] = gets.chomp.to_s
 
 puts "allergist's color"
-client_details[:allergist_color] = gets.chomp.to_s
+client_details[:"allergist color"] = gets.chomp.to_s
+ 
  puts "Please review your client's info. " 
  puts "=================================="
 client_details.each do |key , value|
  puts "#{key}: #{value} ,"
 end 
 
-
+puts "=================================="
 puts "Do you like to update some info?"
-update = gets.chomp.downcase.to_s
-
-if update == 'none'
+update_index = gets.chomp.downcase.to_s
+client_details.each do |key, value|
+if update_index == 'none'
+  puts "Client Details"
+  puts "=================================="
   client_details.each do |key , value|
    puts "#{key}: #{value} ,"
   end
 end
-update = update.downcase.to_sym
+update_index = update_index.downcase.to_sym
 
 puts "Please enter the new value:"
 new_value = gets.chomp.to_s
-client_details[update]= new_value
+client_details[update_index]= new_value
 
 puts "Client Details"
 puts "=================================="
 client_details.each do |key , value|
  puts "#{key}: #{value} ,"
 end
-
-
-
-
