@@ -28,14 +28,14 @@ client_details[:age] = gets.chomp.to_i
 puts "Sex"
 client_details[:sex] = gets.chomp.to_s
 
-puts "Children number"
+puts "Children Number"
 client_details[:"children number"] = gets.chomp.to_i 
 
-puts "decor theme"
+puts "Decor Theme"
 client_details[:"decor theme"] = gets.chomp.to_s
 
-puts "allergist's color"
-client_details[:"allergist color"] = gets.chomp.to_s
+puts "Allergic Color"
+client_details[:"allergic color"] = gets.chomp.to_s
  
  puts "Please review your client's info. " 
  puts "=================================="
