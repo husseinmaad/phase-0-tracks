@@ -18,3 +18,15 @@
                           for the array to get the next letter and break the process and return the value
                           - stop 
 =end
+
+def next_vowal(char)
+  vowal_letter = ['a','e','i','o','u']
+  if vowal_letter.include? (char)
+    if char == 'u'
+       char = 'a'
+    else 
+      index = vowal_letter.index(char) + 1
+      char= vowal_letter[index]
+    end 
+  end 
+end
