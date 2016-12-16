@@ -21,6 +21,8 @@
       - change the name to array
       - change each letter value in the array by send it to the next_vowal_or_letter 
       - join the changed letters and put in variable.
+      - change the new name to capitalize the first letters of each name by split and change each sting
+        first latter to capital  
 =end
 
 def next_vowal_or_letter(char)
@@ -52,4 +54,5 @@ def change_agent_name (string)
   agent_name= string.split('')
   agent_name.map!{|letter| next_vowal_or_letter(letter)}
   new_name = agent_name.join('')
+  new_name = new_name.split.map!{|string| string.capitalize}.join(' ')
 end   
