@@ -27,7 +27,9 @@ def next_vowal(char)
     else 
       index = vowal_letter.index(char) + 1
       char= vowal_letter[index]
-    end 
+    end
+  else 
+    return change_letter(char)  
   end 
 end
 
