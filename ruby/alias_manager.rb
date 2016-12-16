@@ -22,7 +22,16 @@
       - change each letter value in the array by send it to the next_vowal_or_letter 
       - join the changed letters and put in variable.
       - change the new name to capitalize the first letters of each name by split and change each sting
-        first latter to capital  
+        first latter to capital 
+  - create loop
+    - ask the user to input the full name and downcase the letter
+    - break the loop if its equal to quit
+    -swap the name by split is and reverse is and join it again 
+    - send the swap name to change agent name method
+    - create secret agent hash outside the loop to hold the names before and after 
+    - create new index outside the loop and assign it to 0
+    - push the new names and the old name to the secret agent hash by create 
+      unique key name(key name + index) for each round of loop
 =end
 
 def next_vowal_or_letter(char)
@@ -56,3 +65,21 @@ def change_agent_name (string)
   new_name = agent_name.join('')
   new_name = new_name.split.map!{|string| string.capitalize}.join(' ')
 end   
+
+puts "Welcome To Secret Agents of DBC Changing Names System"
+  puts "====================================================="
+  secret_agents_names = {}
+
+  full_name = ""
+  index= 0 
+    loop do
+      puts "Please Enter Your First and Last Name"
+      full_name = gets.chomp.to_s
+      break if full_name == "quit".downcase
+      
+      swap_full_name = full_name.downcase.split.reverse.join(' ')
+      agent_new_name = change_agent_name(swap_full_name)
+      
+      secret_agents_names[:"name#{index}"] = agent_new_name + " is also known as " + full_name
+      index += 1
+    end 
