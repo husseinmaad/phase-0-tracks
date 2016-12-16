@@ -32,6 +32,8 @@
     - create new index outside the loop and assign it to 0
     - push the new names and the old name to the secret agent hash by create 
       unique key name(key name + index) for each round of loop
+  - end of loop
+  - print each value inside the secret agent hash
 =end
 
 def next_vowal_or_letter(char)
@@ -67,7 +69,7 @@ def change_agent_name (string)
 end   
 
 puts "Welcome To Secret Agents of DBC Changing Names System"
-  puts "====================================================="
+puts "====================================================="
   secret_agents_names = {}
 
   full_name = ""
@@ -83,3 +85,5 @@ puts "Welcome To Secret Agents of DBC Changing Names System"
       secret_agents_names[:"name#{index}"] = agent_new_name + " is also known as " + full_name
       index += 1
     end 
+
+secret_agents_names.each {|key, value| puts "#{value}"} 
