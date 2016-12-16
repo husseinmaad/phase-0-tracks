@@ -16,7 +16,11 @@
                     - if letter is equal the letter that i send to to this method
                         - get the index of that letter increment by 1 and assign it as index 
                           for the array to get the next letter and break the process and return the value
-                          - stop 
+                          - stop
+    - create another method that take the agent name and responsible to handle the changing letters process
+      - change the name to array
+      - change each letter value in the array by send it to the next_vowal_or_letter 
+      - join the changed letters and put in variable.
 =end
 
 def next_vowal_or_letter(char)
@@ -43,3 +47,9 @@ def change_letter(char)
   end
   return char
 end 
+
+def change_agent_name (string)
+  agent_name= string.split('')
+  agent_name.map!{|letter| next_vowal_or_letter(letter)}
+  new_name = agent_name.join('')
+end   
