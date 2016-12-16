@@ -19,7 +19,7 @@
                           - stop 
 =end
 
-def next_vowal(char)
+def next_vowal_or_letter(char)
   vowal_letter = ['a','e','i','o','u']
   if vowal_letter.include? (char)
     if char == 'u'
