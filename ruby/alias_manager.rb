@@ -75,7 +75,7 @@ puts "====================================================="
   full_name = ""
   index= 0 
     loop do
-      puts "Please Enter Your First and Last Name"
+      puts "Please Enter Your First and Last Name or Type ('quit') To Exit"
       full_name = gets.chomp.to_s
       break if full_name == "quit".downcase
       
