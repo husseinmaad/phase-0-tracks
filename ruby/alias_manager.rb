@@ -30,3 +30,14 @@ def next_vowal(char)
     end 
   end 
 end
+
+def change_letter(char)
+  main_str = "bcdfghjklmnpgrstvwxyz".chars
+  main_str.each do |letter|
+    if letter == char 
+      char = main_str[main_str.index(letter) + 1]
+      break
+    end 
+  end
+  return char
+end 
