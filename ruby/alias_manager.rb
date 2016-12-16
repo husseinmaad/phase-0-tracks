@@ -9,5 +9,12 @@
             - assign the value to the letter and return the new letter value from the vowel array
             - stop  
     -otherwise :
-       
+       - send the letter to new method to get the next letter in alphabet
+            - create new method that take letter:
+                - create array of alphabet letter exclude the vowels letter 
+                - on each letter of that array:
+                    - if letter is equal the letter that i send to to this method
+                        - get the index of that letter increment by 1 and assign it as index 
+                          for the array to get the next letter and break the process and return the value
+                          - stop 
 =end
