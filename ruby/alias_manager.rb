@@ -85,5 +85,6 @@ puts "====================================================="
       secret_agents_names[:"name#{index}"] = agent_new_name + " is also known as " + full_name
       index += 1
     end 
-
+puts "============DBC Secret Agents Names List============="
 secret_agents_names.each {|key, value| puts "#{value}"} 
+puts "-----------------------------------------------------"
