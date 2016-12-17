@@ -58,3 +58,22 @@ p fib(100)[99]
         - continue to the next index 
   - print the sorted array.
 =end
+
+def sort (arr)
+  len = arr.length 
+  index = 0 
+  while index < len 
+    (len -1).times do |num|
+      if arr[num] > arr[num + 1]
+        a1 = arr[num] 
+        a2 = arr[num + 1]
+        arr[num] = a2
+        arr[num +1] = a1
+      end 
+      index += 1 
+    end
+  end
+  return arr
+end
+
+sort([1,4,6,2])
