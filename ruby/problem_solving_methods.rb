@@ -46,3 +46,15 @@ p fib(3)
 p fib(6)
 p fib(10)
 p fib(100)[99]
+
+
+=begin
+  - provide an array as input 
+  - get the array length.
+  - loop inside the array 
+    - start from the length -1 and do 
+      - if the array for that number is greater the the next index 
+        - switch the result 
+        - continue to the next index 
+  - print the sorted array.
+=end
