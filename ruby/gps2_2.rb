@@ -93,3 +93,43 @@ update_item(new_hash,"mangwwwe", 1)
 p new_hash
 
 print_list(new_hash)
+
+
+
+=begin
+Reflect
+
+1. What did you learn about pseudocode from working on this challenge?
+    - I can write my pseudocode individually for each challenge,
+      and I can also break my pseudocode to the three part which is it:
+      { INPUT, Steps(process), OUTPUT) this is very helpful to organize 
+      your code.
+
+
+2. What are the tradeoffs of using arrays and hashes for this challenge?
+  - I prefer using hash its hold pairs and each pair of item is 
+    hold name and value.
+
+3. What does a method return?
+
+- usually methods return the last code process but you can force it 
+  to return another value.
+
+4. What kind of things can you pass into methods as arguments?
+  - we can pass string, integers, lists (array,hash), 
+     method value, method, boolean.
+
+5. How can you pass information between methods?
+  - by passing the return value with variable or by 
+    call the method it self.
+
+6. What concepts were solidified in this challenge, and what concepts are still confusing?
+
+  - Actually I learned more about its batter to use hash and how I can make 
+    my code more readable, and don't make my code repeat it self, also splitting the program in to
+    individual methods will help to split the rules and easy to debug.
+
+    * question:
+    there is any website you recommended to help me do more challenges practice and has the same level 
+    of the challenges we get in the assessment practices? any help with that is really appreciated. 
+=end
