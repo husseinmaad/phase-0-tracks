@@ -21,6 +21,20 @@ end
 
 # Test the Santa class
 
-hussein = Santa.new
-hussein.speak
-hussein.eat_milk_and_cookies("chocolate")
+#hussein = Santa.new
+#hussein.speak
+#hussein.eat_milk_and_cookies("chocolate")
+
+def create_instances(gen_list,ethn_list)
+    arr_instances = []
+    len = gen_list.length
+    len.times do |idx|
+        arr_instances << Santa.new(gen_list[idx],ethn_list[idx])
+    end 
+    return arr_instances
+end 
+
+gender_list = ['male','N/A','female','male','female','male']
+ethnicity_list= ["white", "Latino", "white","black","N/A","Latino"]
+
+new_instances = create_instances(gender_list,ethnicity_list)
