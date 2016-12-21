@@ -38,3 +38,12 @@ gender_list = ['male','N/A','female','male','female','male']
 ethnicity_list= ["white", "Latino", "white","black","N/A","Latino"]
 
 new_instances = create_instances(gender_list,ethnicity_list)
+
+def instance_behave(list)
+    list.each do |instance|
+        puts " #{instance}"
+        instance.speak
+        instance.eat_milk_and_cookies("chocolate")
+    end 
+end 
+instance_behave(new_instances)
