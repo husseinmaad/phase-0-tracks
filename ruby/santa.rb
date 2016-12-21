@@ -1,3 +1,5 @@
+# Create Santa class
+
 class Santa
 
     def speak
@@ -11,3 +13,9 @@ class Santa
         puts "Initializing Santa instance ..." 
     end 
 end 
+
+# Test the Santa class
+
+hussein = Santa.new
+hussein.speak
+hussein.eat_milk_and_cookies("chocolate")
