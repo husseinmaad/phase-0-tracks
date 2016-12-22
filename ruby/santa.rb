@@ -7,8 +7,8 @@ class Santa
     def initialize(gender,ethnicity)
         @gender = gender
         @ethnicity = ethnicity
-        @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet",
-         "Cupid", "Donner", "Blitzen"]
+        @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
+                            "Vixen", "Comet","Cupid", "Donner", "Blitzen"]
         @age = 0
     end 
 
@@ -53,7 +53,6 @@ def create_instances(gen_list,ethn_list,num)
 end 
 
 =begin   
-end
 def instance_behave(list)
     list.each do |instance|
         puts " #{instance}"
@@ -69,6 +68,20 @@ def instance_behave(list)
     end 
 end 
 =end
+def print_instances_list(list)
+  idx = 1
+  puts "====== Your Santas List Info ======="
+  list.each do |instance|
+    puts "Santa number#{idx}:\n"
+    puts "-" * 20
+    puts "Gender: #{instance.gender}\n"
+    puts"Ethnicity: #{instance.ethnicity}\n"
+    puts "Age: #{instance.age}\n ----------------"
+    idx +=1
+  end
+   puts "=" * 20
+end
+
 
 # Test driver code
 #======================
