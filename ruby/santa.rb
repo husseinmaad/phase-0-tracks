@@ -1,9 +1,9 @@
 # Create Santa class
 #======================
 class Santa
-    attr_reader :age , :ethnicity
-    attr_accessor :gender
-    
+    attr_reader :ethnicity
+    attr_accessor :gender,:age 
+
     def initialize(gender,ethnicity)
         @gender = gender
         @ethnicity = ethnicity
@@ -26,8 +26,18 @@ class Santa
         @age += 1
     end
     def get_mad_at(name)
-        @reindeer_ranking.delete(name)
-        @reindeer_ranking.push(name)
+        @reindeer_ranking << name if @reindeer_ranking.delete(name) 
+    end 
+    def gender=(gender)
+        @gender = gender
+    end 
+
+    #getter method
+    def age
+        @age
+    end 
+    def ethnicity
+        @ethnicity
     end 
 end 
 
@@ -40,12 +50,14 @@ end
 
 # Driver code methods
 #======================
-def create_instances(gen_list,ethn_list,num)
+def create_instances(gen_list,ethn_list)
     arr_instances = []
-    num.times {|idx| arr_instances << Santa.new(gen_list.sample, ethn_list.sample)}
+    num.times {|idx|arr_instances << Santa.new(gen_list.sample,ethn_list.sample)}
     return arr_instances
 end 
 
+=begin   
+end
 def instance_behave(list)
     list.each do |instance|
         puts " #{instance}"
@@ -57,9 +69,10 @@ def instance_behave(list)
         puts "Age: #{instance.age}" 
         instance.get_mad_at("Vixen")
         puts "Ethnicity: #{instance.ethnicity}"
-        instance.gender = "African"
+       # instance.gender = "African"
     end 
 end 
+=end
 
 # Test driver code
 #======================
