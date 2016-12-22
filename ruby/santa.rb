@@ -28,14 +28,6 @@ class Santa
     def get_mad_at(name)
         @reindeer_ranking << name if @reindeer_ranking.delete(name) 
     end 
-    def gender=(gender)
-        @gender = gender
-    end 
-
-    #getter method
-    def age
-        @age
-    end 
     def ethnicity
         @ethnicity
     end 
