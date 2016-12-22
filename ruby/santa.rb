@@ -50,7 +50,7 @@ end
 
 # Driver code methods
 #======================
-def create_instances(gen_list,ethn_list)
+def create_instances(gen_list,ethn_list,num)
     arr_instances = []
     num.times {|idx|arr_instances << Santa.new(gen_list.sample,ethn_list.sample)}
     return arr_instances
@@ -79,5 +79,5 @@ end
 gender_list = ['male','N/A','female','male','female','male']
 ethnicity_list= ["white", "Latino", "white","black","N/A","Latino"]
 
-new_instances = create_instances(gender_list,ethnicity_list)
+new_instances = create_instances(gender_list,ethnicity_list,50)
 instance_behave(new_instances)
