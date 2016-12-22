@@ -85,8 +85,12 @@ end
 
 # Test driver code
 #======================
-gender_list = ['male','N/A','female','male','female','male']
-ethnicity_list= ["white", "Latino", "white","black","N/A","Latino"]
+gender_list = ['bigender','N/A','male','female','agender']
+ethnicity_list= ["white", "Latino","black","N/A","Asian"]
+
+new_instances = create_instances(gender_list,ethnicity_list,50)
+print_instances_list(new_instances)
+
 
 new_instances = create_instances(gender_list,ethnicity_list,50)
 instance_behave(new_instances)
