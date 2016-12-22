@@ -1,6 +1,9 @@
 # Create Santa class
 #======================
 class Santa
+    attr_reader :age , :ethnicity
+    attr_accessor :gender
+    
     def initialize(gender,ethnicity)
         @gender = gender
         @ethnicity = ethnicity
@@ -25,17 +28,6 @@ class Santa
     def get_mad_at(name)
         @reindeer_ranking.delete(name)
         @reindeer_ranking.push(name)
-    end 
-    def gender=(gender)
-        @gender = gender
-    end 
-
-    #getter method
-    def age
-        @age
-    end 
-    def ethnicity
-        @ethnicity
     end 
 end 
 
