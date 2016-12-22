@@ -10,7 +10,6 @@ class Santa
         @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet",
          "Cupid", "Donner", "Blitzen"]
         @age = 0
-        puts "Initializing Santa instance ..." 
     end 
 
     def speak
@@ -21,13 +20,14 @@ class Santa
         puts "That was a good #{cookie_type}"
     end
 
-    # setter methods
     def celebrate_birthday
         @age += 1
     end
+
     def get_mad_at(name)
         @reindeer_ranking << name if @reindeer_ranking.delete(name) 
     end 
+
     def ethnicity
         @ethnicity
     end 
@@ -44,7 +44,11 @@ end
 #======================
 def create_instances(gen_list,ethn_list,num)
     arr_instances = []
-    num.times {|idx|arr_instances << Santa.new(gen_list.sample,ethn_list.sample)}
+    num.times do|santa|
+        santa = Santa.new(gen_list.sample,ethn_list.sample)
+        santa.age = rand(0..140)
+        arr_instances << santa
+    end
     return arr_instances
 end 
 
