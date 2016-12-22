@@ -72,7 +72,7 @@ def print_instances_list(list)
   idx = 1
   puts "====== Your Santas List Info ======="
   list.each do |instance|
-    puts "Santa number#{idx}:\n"
+    puts "Santa number #{idx}:\n"
     puts "-" * 20
     puts "Gender: #{instance.gender}\n"
     puts"Ethnicity: #{instance.ethnicity}\n"
@@ -90,7 +90,3 @@ ethnicity_list= ["white", "Latino","black","N/A","Asian"]
 
 new_instances = create_instances(gender_list,ethnicity_list,50)
 print_instances_list(new_instances)
-
-
-new_instances = create_instances(gender_list,ethnicity_list,50)
-instance_behave(new_instances)
