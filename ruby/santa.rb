@@ -1,5 +1,5 @@
 # Create Santa class
-
+#======================
 class Santa
     def initialize(gender,ethnicity)
         @gender = gender
@@ -40,14 +40,14 @@ class Santa
 end 
 
 # Test the Santa class
-
+#======================
 #new_santa = Santa.new
 #new_santa.speak
 #new_santa.eat_milk_and_cookies("chocolate")
 
 
 # Driver code methods
-
+#======================
 def create_instances(gen_list,ethn_list)
     arr_instances = []
     len = gen_list.length
@@ -66,11 +66,12 @@ def instance_behave(list)
         puts "Age: #{instance.age}" 
         instance.get_mad_at("Vixen")
         puts "Ethnicity: #{instance.ethnicity}"
+        instance.gender = "African"
     end 
 end 
 
 # Test driver code
-
+#======================
 gender_list = ['male','N/A','female','male','female','male']
 ethnicity_list= ["white", "Latino", "white","black","N/A","Latino"]
 
