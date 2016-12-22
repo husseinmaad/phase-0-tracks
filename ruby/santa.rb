@@ -42,7 +42,7 @@ end
 #======================
 def create_instances(gen_list,ethn_list,num)
     arr_instances = []
-    num.times {|idx| arr_instances << Santa.new(gen_list.sample,ethn_list.sample)}
+    num.times {|idx| arr_instances << Santa.new(gen_list.sample, ethn_list.sample)}
     return arr_instances
 end 
 
