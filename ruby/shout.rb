@@ -26,3 +26,10 @@ class Funny
   include Shout
 end 
 
+movie = Scary.new
+puts movie.yell_angrily("Thats so scaryyyyyyyyy")
+puts movie.yelling_happily("I like this part of the movie")
+
+movie2 = Funny.new
+puts movie2.yell_angrily("Omg! thats scared me")
+puts movie2.yelling_happily("Hahaha!! i cant stop laughing ")
