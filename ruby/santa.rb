@@ -17,16 +17,33 @@ class Santa
     def eat_milk_and_cookies(cookie_type)
         puts "That was a good #{cookie_type}"
     end
-    def print_info
-        puts "your gender is #{@gender} and your ethnicity is #{@ethnicity}"
+
+    # setter methods
+    def celebrate_birthday
+        @age += 1
+    end
+    def get_mad_at(name)
+        @reindeer_ranking.delete(name)
+        @reindeer_ranking.push(name)
+    end 
+    def gender=(gender)
+        @gender = gender
+    end 
+
+    #getter method
+    def age
+        @age
+    end 
+    def ethnicity
+        @ethnicity
     end 
 end 
 
 # Test the Santa class
 
-#hussein = Santa.new
-#hussein.speak
-#hussein.eat_milk_and_cookies("chocolate")
+#new_santa = Santa.new
+#new_santa.speak
+#new_santa.eat_milk_and_cookies("chocolate")
 
 
 # Driver code methods
@@ -45,8 +62,10 @@ def instance_behave(list)
         puts "---------------------"
         instance.eat_milk_and_cookies("chocolate")
         puts "---------------------"
-        instance.print_info
-        puts "---------------------"
+        instance.celebrate_birthday
+        puts "Age: #{instance.age}" 
+        instance.get_mad_at("Vixen")
+        puts "Ethnicity: #{instance.ethnicity}"
     end 
 end 
 
