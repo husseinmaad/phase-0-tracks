@@ -40,10 +40,9 @@ end
 
 # Driver code methods
 #======================
-def create_instances(gen_list,ethn_list)
+def create_instances(gen_list,ethn_list,num)
     arr_instances = []
-    len = gen_list.length
-    len.times {|idx|arr_instances << Santa.new(gen_list[idx],ethn_list[idx])}
+    num.times {|idx| arr_instances << Santa.new(gen_list.sample,ethn_list.sample)}
     return arr_instances
 end 
 
