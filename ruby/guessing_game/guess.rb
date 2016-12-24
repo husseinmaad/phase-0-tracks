@@ -17,7 +17,7 @@
       def initialize
          @arr_w = []
          @arr_g = []
-         @limit = ""
+         @limit = 0
          @is_over = false
       end 
 
