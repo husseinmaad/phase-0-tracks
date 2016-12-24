@@ -5,7 +5,8 @@
   # set the the word equal to attr word
   # set the attr. limit equal to the word length
 # crate method to do the process 
-  #
+  # on each char in the word array 
+  # check if the letter in side the word array 
 
 #crate loop that not stop if the user didn't guess the letter and it will stop 
 #as soon as the user figured out the hole word.
@@ -26,7 +27,9 @@
     end 
 
     def process
-    
+      @arr_w.each do |char|
+        if @letter == char
+        end 
     end 
  
   end 
