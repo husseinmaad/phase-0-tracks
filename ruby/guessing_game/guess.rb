@@ -17,7 +17,7 @@
        @letter = ""
        @limit = ""
     end 
-    def get_item(word)
+    def get_word(word)
       @word = word
       @limit = word.length 
     end 
