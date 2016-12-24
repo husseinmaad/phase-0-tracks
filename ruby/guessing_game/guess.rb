@@ -12,16 +12,21 @@
   # set the loop equal to the limit
 
   class Guessing
+      attr_accessor 
     def initialize
-       @word = ""
-       @letter = ""
+       @arr_w = []
+       @arr_g = []
        @limit = ""
        @is_over = false
     end 
+    
     def get_word(word)
-      @word = word
+      @arr_w = word.split('')
       @limit = word.length 
     end 
+
     def process
+    
     end 
+ 
   end 
