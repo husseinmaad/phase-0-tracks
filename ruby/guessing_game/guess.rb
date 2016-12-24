@@ -14,26 +14,28 @@
 
   class Guessing
       attr_accessor 
-    def initialize
+      def initialize
        @arr_w = []
        @arr_g = []
        @limit = ""
        @is_over = false
-    end 
-    
-    def get_word(word)
+      end 
+
+      def get_word(word)
       @limit = word.length 
       @arr_w = word.split('')
-    end 
+      end 
 
-    def process
-      @arr_w.each do |char|
-        if arr_g.include?(char)
-          print char
-       else 
-          print '-'
-          @is_over = false
-       end 
-    end 
- 
+      def process
+         @is_over = true
+         @arr_w.each do |char|
+            if arr_g.include?(char)
+               print char
+            else 
+               print '-'
+               @is_over = false
+            end 
+            return @is_over = true
+         end 
+      end 
   end 
