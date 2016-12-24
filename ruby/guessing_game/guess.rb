@@ -21,8 +21,8 @@
     end 
     
     def get_word(word)
-      @arr_w = word.split('')
       @limit = word.length 
+      @arr_w = word.split('')
     end 
 
     def process
