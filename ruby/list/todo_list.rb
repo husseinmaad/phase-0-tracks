@@ -1,5 +1,4 @@
 class TodoList
-
   def initialize(arr)
     @arr_list = arr
   end
