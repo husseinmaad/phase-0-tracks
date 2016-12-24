@@ -16,9 +16,12 @@
        @word = ""
        @letter = ""
        @limit = ""
+       @is_over = false
     end 
     def get_word(word)
       @word = word
       @limit = word.length 
+    end 
+    def process
     end 
   end 
