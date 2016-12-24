@@ -10,3 +10,7 @@
 #crate loop that not stop if the user didn't guess the letter and it will stop 
 #as soon as the user figured out the hole word.
   # set the loop equal to the limit
+
+  class Guessing
+
+  end 
