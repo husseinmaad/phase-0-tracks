@@ -66,6 +66,7 @@
          guess_word.arr_g << letter
          if guess_word.process == true
             puts "****----Congratulation----****"
+            puts "Your guessed word is \"#{guess_word.arr_w.join('')}\""
             break 
          else 
             puts "Yahh! your guess letter is right :)\n"
