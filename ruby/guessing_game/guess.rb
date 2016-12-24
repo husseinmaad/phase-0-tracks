@@ -13,6 +13,13 @@
 #crate loop that not stop if the user didn't guess the letter and it will stop 
 #as soon as the user figured out the hole word.
   # set the loop equal to the limit
+  # if the in put letter include in the word 
+     # push that letter to the guess array
+     #  if the process method return true break the loop
+         # otherwise it will increase by one
+   #otherwise
+      # loop again and ask the user to input new letter
+   
 
   class Guessing
       attr_accessor :arr_w, :arr_g, :limit
@@ -44,7 +51,7 @@
 
   end 
 
-
+# User Interface Code
 
   idx =0
   guess_word = Guessing.new
@@ -56,11 +63,12 @@
       letter = gets.chomp
       if guess_word.arr_w.include?(letter)
          guess_word.arr_g << letter
-         if guess_word.process == false
+         if guess_word.process == true
+            puts "****----Congratulation----****"
+            break 
+         else 
             puts "Yahh! your guess letter is right :)\n"
             idx +=1
-         else 
-            break
          end 
       else 
          puts "Sorry! your guess letter is wrong :("
