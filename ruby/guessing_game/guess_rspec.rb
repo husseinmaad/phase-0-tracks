@@ -1,3 +1,7 @@
+
+# NOTE: Please if you would like to run this test please remove
+#       the User interface code to make it pass :) thanks!! .
+
 require_relative 'guess'
 
 describe Guessing do

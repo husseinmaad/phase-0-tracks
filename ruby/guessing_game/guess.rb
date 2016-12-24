@@ -19,7 +19,7 @@
          # otherwise it will increase by one
    #otherwise
       # loop again and ask the user to input new letter
-   
+
 
   class Guessing
       attr_accessor :arr_w, :arr_g, :limit
@@ -52,6 +52,7 @@
   end 
 
 # User Interface Code
+
 
   idx =0
   guess_word = Guessing.new
