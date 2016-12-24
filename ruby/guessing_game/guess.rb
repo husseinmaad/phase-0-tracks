@@ -12,5 +12,9 @@
   # set the loop equal to the limit
 
   class Guessing
-
+    def initialize
+       @word = ""
+       @letter = ""
+       @limit = ""
+    end 
   end 
