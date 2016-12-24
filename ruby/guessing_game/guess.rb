@@ -13,29 +13,30 @@
   # set the loop equal to the limit
 
   class Guessing
-      attr_accessor 
+      attr_accessor :arr_w, :arr_g
       def initialize
-       @arr_w = []
-       @arr_g = []
-       @limit = ""
-       @is_over = false
+         @arr_w = []
+         @arr_g = []
+         @limit = ""
+         @is_over = false
       end 
 
       def get_word(word)
-      @limit = word.length 
-      @arr_w = word.split('')
+         @limit = word.length 
+         @arr_w = word.split('')
       end 
 
       def process
          @is_over = true
          @arr_w.each do |char|
-            if arr_g.include?(char)
+            if @arr_g.include?(char)
                print char
-            else 
+            else
                print '-'
                @is_over = false
-            end 
-            return @is_over = true
+            end
          end 
-      end 
+            puts "\n"
+         return @is_over
+      end
   end 
