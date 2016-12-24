@@ -28,8 +28,12 @@
 
     def process
       @arr_w.each do |char|
-        if @letter == char
-        end 
+        if arr_g.include?(char)
+          print char
+       else 
+          print '-'
+          @is_over = false
+       end 
     end 
  
   end 
