@@ -51,7 +51,7 @@
   puts "Please enter the word the you would like th next person to guess"
   guess_word.get_word(gets.chomp)
 
-  while idx < limit + 1 do
+  while idx < guess_word.limit + 1 do
       puts "please enter your guessing letter"
       letter = gets.chomp
       if guess_word.arr_w.include?(letter)
