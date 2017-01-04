@@ -11,4 +11,7 @@ var reverse_str = '';
     reverse_str += str[i];
   return reverse_str;
 }
-reverse("hello")
+str = "hello"
+if (str.length < 10){
+  reverse(str)
+}
