@@ -38,3 +38,16 @@ function Check_match_key(obj1,obj2)
     return false;
    }
 }
+
+function Rundom_string(num)
+{
+  string = "absdefghigklmnopqrstu";
+  output = [];
+  temp = '';
+  for (var i= 0; i< num; i++)
+  {
+    temp = string.charAt(Math.random() * string.length); 
+    output.push(temp);
+  }
+  return output;
+}
