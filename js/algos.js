@@ -12,3 +12,5 @@ function Check_longest_string(arr)
     }
     return longest_w;
 }
+Check_longest_string(["long phrase","longest phrase","longer phrase"]);
+Check_longest_string(["Mike","Hussein","Emmanuel"]);
