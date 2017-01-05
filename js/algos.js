@@ -14,3 +14,27 @@ function Check_longest_string(arr)
 }
 Check_longest_string(["long phrase","longest phrase","longer phrase"]);
 Check_longest_string(["Mike","Hussein","Emmanuel"]);
+
+
+function Check_match_key(obj1,obj2)
+{
+  var count = 0
+    for (var key1 in obj1) 
+  {
+    for (var key2 in obj2)
+    {
+      if(key1 == key2)
+      {
+        count += 1;
+      }
+    }
+  }
+   if (count > 0)
+   {
+    return true;
+   }
+   else
+   {
+    return false;
+   }
+}
