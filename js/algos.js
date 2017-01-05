@@ -46,8 +46,15 @@ function Rundom_string(num)
   temp = '';
   for (var i= 0; i< num; i++)
   {
-    temp = string.charAt(Math.random() * string.length); 
+    temp += string.charAt(Math.random() * string.length); 
     output.push(temp);
   }
   return output;
+}
+var array = []
+for (var i = 0; i < 10; i++) 
+{
+array = Rundom_string(5)
+console.log(array)
+console.log(Check_longest_string(array))
 }
