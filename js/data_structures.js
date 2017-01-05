@@ -24,8 +24,8 @@ names.push("Chad");
 }
 var new_car = new Car("Toyota",2011, "blue")
 console.log(new_car)
-console.log(new_car.yell())
+new_car.yell()
 
 var old_car = new Car("Mazda",1990, "sliver")
 console.log(old_car)
-console.log(new_car.shout())
+new_car.shout()
