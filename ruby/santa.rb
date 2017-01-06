@@ -90,3 +90,19 @@ ethnicity_list= ["white", "Latino","black","N/A","Asian"]
 
 new_instances = create_instances(gender_list,ethnicity_list,50)
 print_instances_list(new_instances)
+
+#Add another way to run the program
+=begin 
+    example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+    example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+    arr = []
+    5.times do |i|
+     santa = Santa.new(example_genders.sample,example_ethnicities.sample)
+     puts "="* 15
+    puts "Gender: #{santa.gender}"
+    puts "Ethnicity: #{santa.ethnicity}"
+    puts "Age: #{santa.age = rand(0..140)}"
+    puts "-"* 15
+    p santa.get_mad_at("Vixen")
+    end 
+=end 
