@@ -40,7 +40,7 @@ create_table_reviews = <<-SQL
     id INTEGER PRIMARY KEY,
     review_comments VARCHAR(255),
     rating INT, 
-    recommended_visit Boolean,
+    recommended_visit INT,
     user_id INT,
     city_id INT,
     FOREIGN KEY (user_id) REFERENCES users(id),
@@ -60,7 +60,7 @@ db.execute( "INSERT INTO users(user_name,age,user_rating,user_email)
             VALUES(?,?,?,?)",[name,age,rating,email])
 end 
 
-def create_review(db,comments,rating,recommendegitd,user_id,city_id)
+def create_review(db,comments,rating,recommended,user_id,city_id)
   db.execute( "INSERT INTO reviews(review_comments,rating,recommended_visit,user_id,city_id)
     VALUES (?,?,?,?,?)",[comments,rating,recommended,user_id,city_id])
 end 
@@ -72,24 +72,26 @@ end
 
 def create_random_comments
   first_word_arr = ["Great!!","Nice!!","Very recommended","Awesome!!"]
-  second_word_arr = [" ,I found the prices really reasonable.random",
-                    " ,I really enjoy it."," really good place for vacation."," place."," city."]
+  second_word_arr = [", I found the prices really reasonable.random",
+                    ", I really enjoy it."," really good place for vacation."," place."," city."]
    comments = first_word_arr.sample + second_word_arr.sample
    return comments              
 end 
 def create_price_sym
-  symbol = "$ "
+  symbol = "$"
   return symbol * rand(1..4)
 end 
+
 # Driver code
 def create_data(db_name)
   300.times do 
-    create_user(db,Faker::Name.name,Faker::Number.between(18, 70),
+    create_user(db_name,Faker::Name.name,Faker::Number.between(18, 70),
                 Faker::Number.between(2, 5),Faker::Internet.email)
 
-    create_cities(db,Faker::Address.city,Faker::Address.country,create_price_sym)
+    create_cities(db_name,Faker::Address.city,Faker::Address.country,create_price_sym)
 
-    create_review(db,create_random_comments,Faker::Number.between(3, 5),
-    Faker::Boolean.boolean,Faker::Number.between(1, 300),Faker::Number.between(1,300))
+    create_review(db_name,create_random_comments,Faker::Number.between(3, 5),
+    Faker::Number.between(0, 1),Faker::Number.between(1, 300),Faker::Number.between(1,300))
   end 
 end 
+create_data(db)
