@@ -53,7 +53,7 @@ db.execute(create_table_users)
 db.execute(create_table_cities)
 db.execute(create_table_reviews)
 
-# methode to create new test users in the users table
+# methods to create new test users in the users table
 def create_user(db,name,age,rating,email)
 
 db.execute( "INSERT INTO users(user_name,age,user_rating,user_email)
@@ -94,19 +94,16 @@ def get_city_on_price(db,price)
 end 
 
 def get_ceriten_info(db)
-  idx = 1
-  rows = db.execute("SELECT users.user_name,users.user_rating, cities.city_name,reviews.review_comments,
+  rows = db.execute("SELECT users.id,users.user_name,users.user_rating, cities.city_name,reviews.review_comments,
                     reviews.rating FROM users JOIN reviews ON users.id = reviews.user_id 
-                    JOIN cities ON reviews.city_id = cities.id")
+                    JOIN cities ON reviews.city_id = cities.id ORDER BY users.id")
   rows.each do |row|
-    puts "#{idx}. Name: #{row['user_name']} User Rate: #{row['user_rating']}
+    puts "#{row['id']}. Name: #{row['user_name']} User Rate: #{row['user_rating']}
       City: #{row['city_name']}
       Comment: #{row['review_comments']} -- Rate: #{row['rating']}"
     puts "-" * 20
-    idx += 1
   end
 end 
-
 
 
 # Driver code
@@ -128,6 +125,7 @@ end
 #puts "please enter the price symbol '$'"
 #input = gets.chomp
 #get_city_on_price(db,input)
+
 get_ceriten_info(db)
 
 
