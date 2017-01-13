@@ -85,8 +85,8 @@ end
 # Select some data methods
 
 def get_city_on_price(db,price)
-  db.execute("SELECT cities.city_name cities.city_coutery_location 
-              WHERE city_prices = #{price}")
+  db.execute("SELECT cities.city_name, cities.city_coutery_location FROM cities 
+              WHERE cities.city_prices = #{price}")
 end 
 
 # Driver code
@@ -102,3 +102,6 @@ def create_data(db_name)
   end 
 end 
 #create_data(db)
+puts "please enter the price symbol '$'"
+input = gets.chomp
+get_city_on_price(db,input)
