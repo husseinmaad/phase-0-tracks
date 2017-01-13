@@ -69,10 +69,18 @@ def create_cities(db,name,contry,prices)
   db.execute( "INSERT INTO reviews(city_name,city_coutery_location,city_prices)
     VALUES (?,?,?)",[name,contry,prices])
 end 
-=begin
-299.times do 
+
+def create_comments
+  first_word_arr = ["Great!!","Nice!!","Very recommended","Awesome!!"]
+  second_word_arr = [" I found the prices really reasonable.",
+                    " I really enjoy it."," really good place for vacation."," place."," city."]
+   comments = first_word_arr.sample + second_word_arr.sample
+   return comments              
+end 
+300.times do 
   create_user(db,Faker::Name.name,Faker::Number.between(18, 70),
               Faker::Number.between(2, 5),Faker::Internet.email)
+
 end 
-=end 
+
 
