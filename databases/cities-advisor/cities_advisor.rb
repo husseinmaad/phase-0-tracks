@@ -12,7 +12,7 @@ require 'faker'
 
 # Create Sqlite3 DB
 db = SQLite3::Database.new("cities_advisor.db")
-
+db.results_as_hash = true
 # Create Tables:
 # Users Table
 create_table_users = <<-SQL
@@ -82,14 +82,18 @@ def create_price_sym
   return symbol * rand(1..4)
 end 
 
-# Select some data methods
-
 def get_city_on_price(db,price)
-  db.execute("SELECT cities.city_name, cities.city_coutery_location FROM cities 
-              WHERE cities.city_prices = #{price}")
+  rows = db.execute("SELECT cities.city_name, cities.city_coutery_location FROM 
+                      cities WHERE cities.city_prices ='#{price}'")
+  puts "City Name       Country"
+  puts "---------       -------"
+  rows.each do |row|
+    puts "#{row['city_name']} -- #{row['city_coutery_location']}"
+  end
 end 
 
 # Driver code
+
 def create_data(db_name)
   300.times do 
     create_user(db_name,Faker::Name.name,Faker::Number.between(18, 70),
@@ -101,7 +105,14 @@ def create_data(db_name)
     Faker::Number.between(0, 1),Faker::Number.between(1, 300),Faker::Number.between(1,300))
   end 
 end 
+
 #create_data(db)
 puts "please enter the price symbol '$'"
 input = gets.chomp
 get_city_on_price(db,input)
+
+
+
+
+
+
