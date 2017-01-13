@@ -53,11 +53,16 @@ db.execute(create_table_users)
 db.execute(create_table_cities)
 db.execute(create_table_reviews)
 
-
+# methode to create new test users in the users table
 def create_user(db,name,age,rating,email)
 
 db.execute( "INSERT INTO users(user_name,age,user_rating,user_email)
             VALUES(?,?,?,?)",[name,age,rating,email])
 end 
 
-create_user(db,"hussein",26,4,"hussein.maad@outlook.com")
+
+300.times do 
+  create_user(db,Faker::Name.name,Faker::Number.between(18, 70),
+              Faker::Number.between(2, 5),Faker::Internet.email)
+end 
+
