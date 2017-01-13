@@ -41,6 +41,10 @@ create_table_reviews = <<-SQL
     review_comments VARCHAR(255),
     rating INT, 
     recommended_visit Boolean,
+    user_id INT,
+    city_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (city_id) REFERENCES cities(id)
   )
 SQL
 
