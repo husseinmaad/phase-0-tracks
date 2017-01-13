@@ -60,9 +60,19 @@ db.execute( "INSERT INTO users(user_name,age,user_rating,user_email)
             VALUES(?,?,?,?)",[name,age,rating,email])
 end 
 
+def create_review(db,comments,rating,recommended,user_id,city_id)
+  db.execute( "INSERT INTO reviews(review_comments,rating,recommended_visit,user_id,city_id)
+    VALUES (?,?,?,?,?)",[comments,rating,recommended,user_id,city_id])
+end 
 
-300.times do 
+def create_cities(db,name,contry,prices)
+  db.execute( "INSERT INTO reviews(city_name,city_coutery_location,city_prices)
+    VALUES (?,?,?)",[name,contry,prices])
+end 
+=begin
+299.times do 
   create_user(db,Faker::Name.name,Faker::Number.between(18, 70),
               Faker::Number.between(2, 5),Faker::Internet.email)
 end 
+=end 
 
