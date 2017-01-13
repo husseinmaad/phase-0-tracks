@@ -74,12 +74,19 @@ def create_random_comments
   first_word_arr = ["Great!!","Nice!!","Very recommended","Awesome!!"]
   second_word_arr = [", I found the prices really reasonable.random",
                     ", I really enjoy it."," really good place for vacation."," place."," city."]
-   comments = first_word_arr.sample + second_word_arr.sample
-   return comments              
+   return comments = first_word_arr.sample + second_word_arr.sample             
 end 
+
 def create_price_sym
   symbol = "$"
   return symbol * rand(1..4)
+end 
+
+# Select some data methods
+
+def get_city_on_price(db,price)
+  db.execute("SELECT cities.city_name cities.city_coutery_location 
+              WHERE city_prices = #{price}")
 end 
 
 # Driver code
@@ -94,4 +101,4 @@ def create_data(db_name)
     Faker::Number.between(0, 1),Faker::Number.between(1, 300),Faker::Number.between(1,300))
   end 
 end 
-create_data(db)
+#create_data(db)
