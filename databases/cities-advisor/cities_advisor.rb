@@ -81,15 +81,15 @@ def create_price_sym
   symbol = "$ "
   return symbol * rand(1..4)
 end 
+# Driver code
+def create_data(db_name)
+  300.times do 
+    create_user(db,Faker::Name.name,Faker::Number.between(18, 70),
+                Faker::Number.between(2, 5),Faker::Internet.email)
 
-300.times do 
-  create_user(db,Faker::Name.name,Faker::Number.between(18, 70),
-              Faker::Number.between(2, 5),Faker::Internet.email)
-  create_cities(db,Faker::Address.city,Faker::Address.country)
+    create_cities(db,Faker::Address.city,Faker::Address.country,create_price_sym)
+
+    create_review(db,create_random_comments,Faker::Number.between(3, 5),
+    Faker::Boolean.boolean,Faker::Number.between(1, 300),Faker::Number.between(1,300))
+  end 
 end 
-=begin
-  create_review(db,create_random_comments,Faker::Number.between(3, 5),
-  Faker::Boolean.boolean,Faker::Number.between(1, 299),Faker::Number.between(1,299))
-  
-end
-
