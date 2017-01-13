@@ -20,7 +20,7 @@ create_table_users = <<-SQL
     id INTEGER PRIMARY KEY,
     user_name VARCHAR(255),
     age INT,
-    user_reating INT,
+    user_rating INT,
     user_email VARCHAR(255)
   )
 SQL
@@ -53,3 +53,9 @@ db.execute(create_table_users)
 db.execute(create_table_cities)
 db.execute(create_table_reviews)
 
+
+def create_user(db,name,age,rating,email)
+  
+db.execute( "INSERT INTO users(user_name,age,user_rating,user_email)
+            VALUES(?,?,?,?)",[name,age,rating,email])
+end 
