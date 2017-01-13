@@ -55,7 +55,9 @@ db.execute(create_table_reviews)
 
 
 def create_user(db,name,age,rating,email)
-  
+
 db.execute( "INSERT INTO users(user_name,age,user_rating,user_email)
             VALUES(?,?,?,?)",[name,age,rating,email])
 end 
+
+create_user(db,"hussein",26,4,"hussein.maad@outlook.com")
