@@ -60,27 +60,36 @@ db.execute( "INSERT INTO users(user_name,age,user_rating,user_email)
             VALUES(?,?,?,?)",[name,age,rating,email])
 end 
 
-def create_review(db,comments,rating,recommended,user_id,city_id)
+def create_review(db,comments,rating,recommendegitd,user_id,city_id)
   db.execute( "INSERT INTO reviews(review_comments,rating,recommended_visit,user_id,city_id)
     VALUES (?,?,?,?,?)",[comments,rating,recommended,user_id,city_id])
 end 
 
 def create_cities(db,name,contry,prices)
-  db.execute( "INSERT INTO reviews(city_name,city_coutery_location,city_prices)
+  db.execute( "INSERT INTO cities(city_name,city_coutery_location,city_prices)
     VALUES (?,?,?)",[name,contry,prices])
 end 
 
-def create_comments
+def create_random_comments
   first_word_arr = ["Great!!","Nice!!","Very recommended","Awesome!!"]
-  second_word_arr = [" I found the prices really reasonable.",
-                    " I really enjoy it."," really good place for vacation."," place."," city."]
+  second_word_arr = [" ,I found the prices really reasonable.random",
+                    " ,I really enjoy it."," really good place for vacation."," place."," city."]
    comments = first_word_arr.sample + second_word_arr.sample
    return comments              
 end 
+def create_price_sym
+  symbol = "$ "
+  return symbol * rand(1..4)
+end 
+
 300.times do 
   create_user(db,Faker::Name.name,Faker::Number.between(18, 70),
               Faker::Number.between(2, 5),Faker::Internet.email)
-
+  create_cities(db,Faker::Address.city,Faker::Address.country)
 end 
-
+=begin
+  create_review(db,create_random_comments,Faker::Number.between(3, 5),
+  Faker::Boolean.boolean,Faker::Number.between(1, 299),Faker::Number.between(1,299))
+  
+end
 
