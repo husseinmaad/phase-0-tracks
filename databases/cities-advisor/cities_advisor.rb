@@ -119,11 +119,9 @@ def create_data(db_name)
   300.times do 
     create_user(db_name,Faker::Name.name,Faker::Number.between(18, 70),
                 Faker::Number.between(2, 5),Faker::Internet.email)
-
     create_cities(db_name,Faker::Address.city,Faker::Address.country,create_price_sym)
-
     create_review(db_name,create_random_comments,Faker::Number.between(3, 5),
-    Faker::Number.between(0, 1),Faker::Number.between(1, 300),Faker::Number.between(1,300))
+                  Faker::Number.between(0, 1),Faker::Number.between(1, 300),Faker::Number.between(1,300))
   end 
 end 
 
@@ -132,12 +130,33 @@ end
 puts "Welcome to City Advisor Database"
 puts "Do you like to view cretin information about City Advisor Database?(y/n)"
 get_ceriten_info(db) if (gets.chomp.downcase == "y"? true : false) 
+
 puts "Do you like to check if your next city is expensive or not?(y/n)"
-puts "please enter the price range symbol'$' up to '$$$$$'" if (gets.chomp.downcase == "y"? true : false)
-price_range = gets.chomp
-get_city_on_price(db,price_range)
+view_city = (gets.chomp.downcase == "y"? true : false) 
+if view_city == true
+  puts "please enter the price range symbol'$' up to '$$$$$'" 
+  price_range = gets.chomp
+  get_city_on_price(db,price_range)
+end 
 
+puts "Do you like to update the user rating?(y/n)"
+update_rate = (gets.chomp.downcase == "y"? true : false) 
+if view_city == true
+  puts "Please enter the User ID number:"
+  id_num = gets.chomp.to_i
+  puts "Please enter the new User Rating value:"
+  new_rate_value = gets.chomp.to_i
+  update_user_rateing(db,id_num,new_rate_value)
+end
 
-
-
+puts "Do you like to delete some info?(y/n)"
+del_info = (gets.chomp.downcase == "y"? true : false)
+if del_info == true
+  puts "Please enter the table name that you want to delete from:" 
+  table_name = gets.chomp
+  puts "Please enter the ID number:"
+  id_num = gets.chomp.to_i
+  delete_from_table(db,id_num,table_name)
+end 
+puts "THANK YOU"
 
