@@ -104,9 +104,17 @@ def get_ceriten_info(db)
     puts "-" * 20
   end
 end 
+
 def update_user_rateing(db,id,new_value)
   db.execute("UPDATE users SET user_rating=#{new_value} WHERE users.id =#{id}")
-end 
+end
+
+
+def delete_from_table(db,id,table_name)
+  db.execute("DELETE FROM #{table_name} WHERE #{table_name}.id =#{id}")
+end
+
+
 # Driver code
 
 def create_data(db_name)
@@ -123,11 +131,12 @@ end
 
 #create_data(db)
 
+
 #puts "please enter the price symbol '$'"
 #input = gets.chomp
 #get_city_on_price(db,input)
-update_user_rateing(db,300,2)
-get_ceriten_info(db)
+#update_user_rateing(db,300,2)
+#get_ceriten_info(db)
 
 
 
