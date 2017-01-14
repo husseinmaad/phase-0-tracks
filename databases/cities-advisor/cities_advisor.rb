@@ -126,7 +126,7 @@ def create_data(db_name)
   end 
 end 
 
-create_data(db)
+#create_data(db)
 
 puts "Welcome to City Advisor Database"
 puts "Do you like to view cretin information about City Advisor Database?(y/n)"
