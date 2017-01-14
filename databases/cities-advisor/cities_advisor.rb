@@ -3,7 +3,6 @@
 # require gems
 require 'sqlite3'
 require 'faker'
-
 # Design the Schema for my Data Base
 
 # - database name = cities_advisor
@@ -113,8 +112,7 @@ end
 def delete_from_table(db,id,table_name)
   db.execute("DELETE FROM #{table_name} WHERE #{table_name}.id =#{id}")
 end
-
-
+ 
 # Driver code
 
 def create_data(db_name)
@@ -131,12 +129,13 @@ end
 
 #create_data(db)
 
-
-#puts "please enter the price symbol '$'"
-#input = gets.chomp
-#get_city_on_price(db,input)
-#update_user_rateing(db,300,2)
-#get_ceriten_info(db)
+puts "Welcome to City Advisor Database"
+puts "Do you like to view cretin information about City Advisor Database?(y/n)"
+get_ceriten_info(db) if (gets.chomp.downcase == "y"? true : false) 
+puts "Do you like to check if your next city is expensive or not?(y/n)"
+puts "please enter the price range symbol'$' up to '$$$$$'" if (gets.chomp.downcase == "y"? true : false)
+price_range = gets.chomp
+get_city_on_price(db,price_range)
 
 
 
