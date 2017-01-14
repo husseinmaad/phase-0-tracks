@@ -81,6 +81,7 @@ def create_price_sym
   return symbol * rand(1..4)
 end 
 
+# Some select from DB methods
 def get_city_on_price(db,price)
   rows = db.execute("SELECT cities.city_name, cities.city_coutery_location FROM 
                       cities WHERE cities.city_prices ='#{price}'")
@@ -103,12 +104,12 @@ def get_ceriten_info(db)
     puts "-" * 20
   end
 end 
-
+# Update from DB method
 def update_user_rateing(db,id,new_value)
   db.execute("UPDATE users SET user_rating=#{new_value} WHERE users.id =#{id}")
 end
 
-
+# Delete from DB method
 def delete_from_table(db,id,table_name)
   db.execute("DELETE FROM #{table_name} WHERE #{table_name}.id =#{id}")
 end
@@ -125,7 +126,7 @@ def create_data(db_name)
   end 
 end 
 
-#create_data(db)
+create_data(db)
 
 puts "Welcome to City Advisor Database"
 puts "Do you like to view cretin information about City Advisor Database?(y/n)"
