@@ -87,7 +87,29 @@ resource or the updates of existing resources or both.
 
 [More Details about GET & POST](http://www.w3schools.com/tags/ref_httpmethods.asp)
 
-## What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
+## What is a cookie (the technical kind, not the delicious kind)? How does it relate to 
+HTTP requests?
 
-> 
+*Cookies*
+
+> Websites save information about you in cookies (files) on your computer. The next time 
+you visit that site, the code will read that file to “remember” you. We rely on cookies 
+all the time. For example, when you go to a Website and the page remembers your user name 
+and password – that’s made possible by a cookie.
+
+> There are also cookies that remember more detailed information about you. Perhaps your 
+interests, your Web browsing patterns, etc. This means that a site can provide you more 
+targeted content – often in the form of ads. 
+
+*There are types of cookies:*
+
+* called third-party cookies – that track you from sites you’re not even visiting at the
+ time to gather information about you, which is sometimes sold.
+
+* Some cookies track you until you close your browser. 
+
+* Other cookies track you until you delete them. 
+
+> In general, cookies can’t harm your computer, but sometimes people are concerned about 
+cookies and their privacy.
 
