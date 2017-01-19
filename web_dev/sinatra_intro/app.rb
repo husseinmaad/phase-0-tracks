@@ -53,7 +53,9 @@ end
 #route that can take a person's 
 # name as a query parameter
 get '/great_job' do 
-  "<h1>#{params[:name]} is going to study at DBC </h1>"
+  name = params[:name]
+  output= (name ? "<h1>Great job #{params[:name]}!</h1>" : "<h1>Great job!</h1>")
+  return output
 end 
 
 
