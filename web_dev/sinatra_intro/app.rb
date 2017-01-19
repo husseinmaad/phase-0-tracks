@@ -9,6 +9,7 @@ db.results_as_hash = true
 # add a query parameter
 # GET /
 get '/' do
+  p params
   "#{params[:name]} is #{params[:age]} years old."
 end
 
@@ -48,6 +49,11 @@ end
 #displays an address
 get '/contact' do
   "<strong><em>328 S. linhaven Cir, Anaheim, CA 92804</em></strong>"
+end 
+#route that can take a person's 
+# name as a query parameter
+get '/great_job' do 
+  "<h1>#{params[:name]} is going to study at DBC </h1>"
 end 
 
 
