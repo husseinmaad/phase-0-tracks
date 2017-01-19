@@ -22,27 +22,38 @@
     <div class="button-style">
         <button id="btn1">I Can Hide & Show Element</button>
         <button id="btn2">I Can Move Element</button>
-        <button id="btn3">Try Me 3</button>
-        <button id="btn4">Try Me 4</button>
-        <button id="btn5">Try Me 5</button>
-        <button id="btn6">Try Me 6</button>
+        <button id="btn3">I Can Change Text</button>
+        <button id="btn4">I Can Make Some Actions</button>
     </div>
-<script src = "jquery.js"></script>
-<script>
-  $(function(){
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
 
-    $('#btn1').on('click',function(){
-      $("#section1").hide(500).show(1000);
-    })
-    $('#btn2').click(function(){
-      $('#section2').animate({top: '100px'});
-    })
-    $('h1').on('mouseover',function(){
-      $('h1').fadeOut(500).fadeIn(500);
-    })
+            $('#btn1').on('click', function() {
+                $("#section1").hide(500).show(1000);
+            })
+            $('#btn2').click(function() {
+                $('#section2').animate({
+                    top: '100px'
+                });
+            })
+            $('h1').on('mouseover', function() {
+                $('h1').fadeOut(500).fadeIn(500);
+            })
+            $("#btn3").on('click', function() {
+                $("#section3").html("<strong> Hey I Can Change My Text Awesome!!</strong>");
+            })
+            $('#btn4').click(function() {
+                $('h1').animate({
+                    fontSize: '3em'
+                }, "slow");
+                $('h1').animate({
+                    fontSize: '2em'
+                }, "slow");
+            })
 
-  });
-</script>
+        });
+    </script>
 </body>
 
 </html>
