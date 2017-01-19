@@ -57,5 +57,11 @@ get '/great_job' do
   output= (name ? "<h1>Great job #{params[:name]}!</h1>" : "<h1>Great job!</h1>")
   return output
 end 
+#A route that uses route parameters 
+#to add two numbers and respond with the result
+get '/:num_1/+/:num_2' do 
+  result = params[:num_1].to_i + params[:num_2].to_i
+  return "your result is = #{result}"
+end 
 
 
