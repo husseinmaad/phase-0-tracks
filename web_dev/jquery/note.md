@@ -7,3 +7,7 @@
 *Note:*
 
 **Take break each hour for 10 - 15 min**
+
+update:
+1- finish 5 videos out of 10
+2- read jQuery Tutorial and jQuery effects in W3 schools
