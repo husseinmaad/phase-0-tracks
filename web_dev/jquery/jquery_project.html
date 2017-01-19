@@ -20,14 +20,30 @@
         </section>
     </div>
     <div class="button-style">
-        <button id="btn1">Try Me 1</button>
-        <button id="btn2">Try Me 2</button>
+        <button id="btn1">I Can Hide & Show Element</button>
+        <button id="btn2">I Can Move Element</button>
         <button id="btn3">Try Me 3</button>
         <button id="btn4">Try Me 4</button>
         <button id="btn5">Try Me 5</button>
         <button id="btn6">Try Me 6</button>
     </div>
+<script src = "jquery.js"></script>
+<script>
+  $(function(){
 
+    $('#btn1').on('click',function(){
+      $("#section1").hide(500).show(1000);
+    })
+    $('#btn2').click(function(){
+      $('#section2').animate({top: '100px'});
+    })
+    $('h1').on('mouseover',function(){
+      $('h1').fadeOut(500).fadeIn(500);
+    })
+
+  });
+</script>
 </body>
 
 </html>
+<script>
