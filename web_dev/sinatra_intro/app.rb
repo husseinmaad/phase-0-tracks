@@ -9,6 +9,7 @@ db.results_as_hash = true
 # add a query parameter
 # GET /
 get '/' do
+  p params
   "#{params[:name]} is #{params[:age]} years old."
 end
 
@@ -44,3 +45,27 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+# write a GET route that
+#displays an address
+get '/contact' do
+  "<strong><em>328 S. linhaven Cir, Anaheim, CA 92804</em></strong>"
+end 
+#route that can take a person's 
+# name as a query parameter
+get '/great_job' do 
+  name = params[:name]
+  output= (name ? "<h1>Great job #{params[:name]}!</h1>" : "<h1>Great job!</h1>")
+  return output
+end 
+#A route that uses route parameters 
+#to add two numbers and respond with the result
+get '/:num_1/+/:num_2' do 
+  result = params[:num_1].to_i + params[:num_2].to_i
+  return "your result is = #{result}"
+end 
+# Make a route that allows the user to search the database in some way
+get '/students/:age' do
+  student = db.execute("SELECT * FROM students WHERE age=?", [params[:age]])
+  student.to_s
+end
+
