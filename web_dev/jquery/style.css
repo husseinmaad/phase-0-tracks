@@ -1,0 +1,51 @@
+body {
+    background-image: url("backgrounds.jpg");
+}
+h1 {
+    position: relative;
+    left: 9em;
+    width: 450px;
+}
+.panels {
+    background-color: #98bf21;
+    width: 900px;
+    border-radius: 20px;
+    position: relative;
+    left: 12em;
+}
+#section1 {
+    padding: 20px;
+    margin: 20px;
+    background-color: gray;
+    width: 60px;
+    border-radius: 20px;
+    position: relative;
+    left: 13em;
+    top: 3em;
+}
+#section2 {
+    padding: 20px;
+    margin: 20px;
+    background-color: gray;
+    width: 60px;
+    border-radius: 20px;
+    position: relative;
+    left: 23em;
+    top: -15px;
+}
+#section3 {
+    padding: 20px;
+    margin: 20px;
+    background-color: gray;
+    width: 60px;
+    border-radius: 20px;
+    position: relative;
+    left: 33em;
+    bottom: 5em;
+}
+.button-style {
+    background-color: #4a4c4f;
+    position: relative;
+    left: 27em;
+    width: 415px;
+}

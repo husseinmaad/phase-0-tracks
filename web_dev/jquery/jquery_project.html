@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="panels">
+        <h1>Small jQuery Project</h1>
+        <section id="section1">
+            <p>First section</p>
+        </section>
+        <section id="section2">
+            <p>Second section</p>
+        </section>
+        <section id="section3">
+            <p>Third section</p>
+        </section>
+    </div>
+    <div class="button-style">
+        <button id="btn1">I Can Hide & Show Element</button>
+        <button id="btn2">I Can Move Element</button>
+        <button id="btn3">I Can Change Text</button>
+        <button id="btn4">I Can Make Some Actions</button>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
+
+            $('#btn1').on('click', function() {
+                $("#section1").hide(500).show(1000);
+            })
+            $('#btn2').click(function() {
+                $('#section2').animate({
+                    top: '100px'
+                });
+            })
+            $('h1').on('mouseover', function() {
+                $('h1').fadeOut(500).fadeIn(500);
+            })
+            $("#btn3").on('click', function() {
+                $("#section3").html("<strong> Hey I Can Change My Text Awesome!!</strong>");
+            })
+            $('#btn4').click(function() {
+                $('h1').animate({
+                    fontSize: '3em'
+                }, "slow");
+                $('h1').animate({
+                    fontSize: '2em'
+                }, "slow");
+            })
+
+        });
+    </script>
+</body>
+
+</html>
+<script>
