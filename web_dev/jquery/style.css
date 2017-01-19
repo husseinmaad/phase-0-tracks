@@ -4,6 +4,7 @@ body {
 h1 {
     position: relative;
     left: 9em;
+    width: 300px;
 }
 .panels {
     background-color: #98bf21;
