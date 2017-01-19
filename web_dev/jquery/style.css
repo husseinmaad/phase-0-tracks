@@ -1,9 +1,20 @@
-
+body
+{
+  background-color: #dcdee2;
+}
+h1
+{
+  position: relative;
+  left: 9em;
+}
 .panels
 {
   background-color: #98bf21;
   width: 900px;
   border-radius: 20px;
+  position: relative;
+  left: 12em;
+
 }
 #section1
 {
@@ -37,5 +48,12 @@
   position: relative;
   left: 33em;
   bottom: 5em;
-  
+}
+.button-style
+{
+  background-color: #4a4c4f;
+  position: relative;
+  left: 27em;
+  width: 415px;
+
 }
