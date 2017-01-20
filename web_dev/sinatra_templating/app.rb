@@ -25,3 +25,34 @@ post '/students' do
 end
 
 # add static resources
+get '/students/update' do
+  erb :update_student
+end
+
+
+post '/students/update' do
+  db.execute("DELETE FROM students WHERE students.id = ?",[params['id'].to_i])
+  redirect '/'
+end
+
+
+
+
+
+
+
+
+
+=begin
+# add static resources
+get '/students/update' do
+  erb :update_student
+end
+# update students via
+# a form
+post '/students/update' do
+  p params
+  db.execute("UPDATE students SET #{params['column']}=#{params['value']} WHERE students.id=#{params['id'].to_i}")
+  redirect '/'
+end
+=end 
