@@ -64,8 +64,8 @@ get '/:num_1/+/:num_2' do
   return "your result is = #{result}"
 end 
 # Make a route that allows the user to search the database in some way
-get '/students/:age' do
-  student = db.execute("SELECT * FROM students WHERE age=?", [params[:age]])
+get '/students/search/:campus' do
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
   student.to_s
 end
 
